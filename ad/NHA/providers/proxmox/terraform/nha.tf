@@ -7,7 +7,7 @@ resource "proxmox_vm_qemu" "dc01" {
 
     sockets = 1
     cores = 2
-    memory = 3096
+    memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
 
@@ -33,7 +33,7 @@ resource "proxmox_vm_qemu" "dc02" {
     pool = var.pm_pool
     sockets = 1
     cores = 2
-    memory = 3096
+    memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
     network {
