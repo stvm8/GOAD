@@ -13,7 +13,7 @@ resource "proxmox_vm_qemu" "dc01" {
     full_clone = var.pm_full_clone
 
    network {
-     bridge    = "vmbr3"
+     bridge    = "vmbr2"
      model     = "e1000"
      tag       = 10
    }
@@ -40,7 +40,7 @@ resource "proxmox_vm_qemu" "dc02" {
     full_clone = var.pm_full_clone
 
     network {
-      bridge    = "vmbr3"
+      bridge    = "vmbr2"
       model     = "e1000"
       tag       = 10
     }
@@ -69,7 +69,7 @@ resource "proxmox_vm_qemu" "DC03" {
     full_clone = var.pm_full_clone
 
     network {
-      bridge    = "vmbr3"
+      bridge    = "vmbr2"
       model     = "e1000"
       tag       = 10 
     }
@@ -96,7 +96,7 @@ resource "proxmox_vm_qemu" "srv02" {
     full_clone = var.pm_full_clone
 
     network {
-      bridge    = "vmbr3"
+      bridge    = "vmbr2"
       model     = "e1000"
       tag       = 10
     }
@@ -123,7 +123,7 @@ resource "proxmox_vm_qemu" "srv03" {
     full_clone = var.pm_full_clone
 
     network {
-      bridge    = "vmbr3"
+      bridge    = "vmbr2"
       model     = "e1000"
       tag       = 10
     }
