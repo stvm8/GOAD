@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "dc01" {
     pool = var.pm_pool
 
     sockets = 1
-    cores = 2
+    cores = 4
     memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
@@ -32,7 +32,7 @@ resource "proxmox_vm_qemu" "dc02" {
     target_node = var.pm_node
     pool = var.pm_pool
     sockets = 1
-    cores = 2
+    cores = 4
     memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
@@ -57,7 +57,7 @@ resource "proxmox_vm_qemu" "srv01" {
     target_node = var.pm_node
     pool = var.pm_pool
     sockets = 1
-    cores = 2
+    cores = 4
     memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
@@ -66,11 +66,6 @@ resource "proxmox_vm_qemu" "srv01" {
       bridge    = "vmbr3"
       model     = "e1000"
       tag       = 20
-    }
-    network {
-      bridge    = "vmbr3"
-      model     = "e1000"
-      tag       = 30
     }
     lifecycle {
       ignore_changes = [
@@ -89,7 +84,7 @@ resource "proxmox_vm_qemu" "srv02" {
     target_node = var.pm_node
     pool = var.pm_pool
     sockets = 1
-    cores = 2
+    cores = 4
     memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
@@ -115,7 +110,7 @@ resource "proxmox_vm_qemu" "srv03" {
     target_node = var.pm_node
     pool = var.pm_pool
     sockets = 1
-    cores = 2
+    cores = 4
     memory = 4096
     agent = 1
     clone = "WinServer2019x64-cloudinit-qcow2"
