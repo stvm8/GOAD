@@ -18,8 +18,8 @@ dns_server=192.168.20.1
 
 two_adapters=no
 ; adapter created by vagrant and virtualbox (comment if you use vmware)
-nat_adapter=Ethernet 2
-domain_adapter=Ethernet 2
+nat_adapter=Ethernet*
+domain_adapter=Ethernet*
 
 
 ; winrm connection (windows)
